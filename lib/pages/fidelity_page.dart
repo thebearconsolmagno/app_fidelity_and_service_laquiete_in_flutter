@@ -53,9 +53,9 @@ class _FidelityPageState extends State<FidelityPage> {
           children: [
             Row(
               children: [
-                Expanded(child: _buildSmallStat(context, "RISTORANTE", user?.pointsRistorante ?? 0, Theme.of(context).primaryColor)),
+                Expanded(child: _buildSmallStat(context, "RISTORANTE", user?.restaurantPoints ?? 0, Theme.of(context).primaryColor)),
                 const SizedBox(width: 16),
-                Expanded(child: _buildSmallStat(context, "PIZZERIA", user?.pointsPizzeria ?? 0, Theme.of(context).colorScheme.secondary)),
+                Expanded(child: _buildSmallStat(context, "PIZZERIA", user?.pizzeriaPoints ?? 0, Theme.of(context).colorScheme.secondary)),
               ],
             ),
             const SizedBox(height: 40),

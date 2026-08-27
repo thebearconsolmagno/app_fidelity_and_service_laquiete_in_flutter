@@ -35,8 +35,8 @@ class User {
   final String email;
   final String phoneDDI;
   final String phoneNumber;
-  final int pointsRistorante;
-  final int pointsPizzeria;
+  final int restaurantPoints;
+  final int pizzeriaPoints;
 
   User({
     required this.id,
@@ -44,8 +44,8 @@ class User {
     required this.email,
     required this.phoneDDI,
     required this.phoneNumber,
-    required this.pointsRistorante,
-    required this.pointsPizzeria,
+    required this.restaurantPoints,
+    required this.pizzeriaPoints,
   });
 
   factory User.fromJson(Map<String, dynamic> json) {
@@ -55,8 +55,8 @@ class User {
       email: json['email'],
       phoneDDI: json['phoneDDI'] ?? '+39',
       phoneNumber: json['phoneNumber'] ?? '',
-      pointsRistorante: json['pointsRistorante'] ?? 0,
-      pointsPizzeria: json['pointsPizzeria'] ?? 0,
+      restaurantPoints: json['pointsRistorante'] ?? 0,
+      pizzeriaPoints: json['pointsPizzeria'] ?? 0,
     );
   }
 }

@@ -1,38 +1,38 @@
 # La Quiete Mobile
 
-Aplicativo multiplataforma do **La Quiete — Hotel, Ristorante e Bar**, desenvolvido em Flutter. A solução oferece uma experiência mobile para consultar o cardápio, acompanhar o programa de fidelidade e solicitar reservas.
+Cross-platform Flutter application for **La Quiete — Hotel, Restaurant and Bar**. It gives customers a mobile experience for browsing the menu, tracking loyalty rewards, and requesting reservations.
 
-## Funcionalidades
+## Features
 
-- Cadastro, login e recuperação de senha
-- Cardápio com categorias, imagens, preços e alérgenos
-- Pontuação e histórico do programa de fidelidade
-- Solicitação e acompanhamento de reservas
-- Tema e identidade visual fornecidos pelo backend
-- Persistência de sessão no dispositivo
-- Suporte a Android, iOS, Web, Windows, macOS e Linux
-- Interface em italiano
+- Registration, login, and password recovery
+- Menu with categories, images, prices, and allergen information
+- Loyalty points and transaction history
+- Reservation requests and tracking
+- Backend-provided branding and visual theme
+- On-device session persistence
+- Android, iOS, Web, Windows, macOS, and Linux support
+- Italian customer interface
 
-## Tecnologias
+## Technology
 
-- Flutter e Dart
-- Provider para gerenciamento de estado
-- HTTP para integração com a API REST
-- Shared Preferences para persistência local
+- Flutter and Dart
+- Provider for state management
+- HTTP for REST API integration
+- Shared Preferences for local persistence
 - Google Fonts
 - Intl
 - QR Flutter
 
-## Como executar
+## Getting Started
 
-### Pré-requisitos
+### Prerequisites
 
 - Flutter SDK 3.x
-- Dart SDK compatível
-- Um emulador, dispositivo físico ou navegador configurado
-- Backend Flask compatível em execução
+- A compatible Dart SDK
+- A configured emulator, physical device, or browser
+- A compatible running Flask backend
 
-### Instalação
+### Installation
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
@@ -41,52 +41,52 @@ flutter pub get
 flutter run --dart-define=API_BASE_URL=http://127.0.0.1:5000
 ```
 
-Em um emulador Android, o endereço do computador normalmente é `http://10.0.2.2:5000`. Em um dispositivo físico, use o IP local da máquina que executa o backend.
+On an Android emulator, the host computer is usually available at `http://10.0.2.2:5000`. On a physical device, use the local IP address of the machine running the backend.
 
-## Configuração
+## Configuration
 
-A configuração é fornecida em tempo de compilação:
+Configuration is supplied at compile time:
 
 ```bash
 flutter run \
   --dart-define=API_BASE_URL=https://api.exemplo.com \
-  --dart-define=SYSTEM_USER=usuario \
-  --dart-define=SYSTEM_PASS=senha
+  --dart-define=SYSTEM_USER=username \
+  --dart-define=SYSTEM_PASS=password
 ```
 
-`SYSTEM_USER` e `SYSTEM_PASS` são opcionais e só devem ser usados se o backend legado exigir autenticação Basic. Aplicativos cliente podem ser inspecionados, portanto essas credenciais não devem ser tratadas como segredo. Em produção, prefira autenticação individual com tokens de curta duração e validação no servidor.
+`SYSTEM_USER` and `SYSTEM_PASS` are optional and should only be used when a legacy backend requires Basic authentication. Client applications can be inspected, so these values must not be treated as secrets. For production, prefer individual authentication with short-lived tokens and server-side validation.
 
-## Comandos úteis
+## Useful Commands
 
 ```bash
-flutter analyze       # executa a análise estática
-flutter test          # executa os testes
-flutter build apk     # gera o APK Android
-flutter build appbundle  # gera o Android App Bundle
-flutter build web     # gera a versão web
+flutter analyze          # Run static analysis
+flutter test             # Run automated tests
+flutter build apk        # Build an Android APK
+flutter build appbundle  # Build an Android App Bundle
+flutter build web        # Build the web application
 ```
 
-## Estrutura do projeto
+## Project Structure
 
 ```text
-├── assets/           # ícones e recursos visuais
+├── assets/           # Icons and visual assets
 ├── lib/
-│   ├── config/       # configuração do ambiente
-│   ├── models/       # modelos de dados
-│   ├── pages/        # telas da aplicação
-│   ├── providers/    # estado e sessão
-│   ├── services/     # integração com a API
-│   └── main.dart     # ponto de entrada
-├── test/             # testes automatizados
-├── android/          # projeto Android
-├── ios/              # projeto iOS
-└── web/              # projeto Web
+│   ├── config/       # Environment configuration
+│   ├── models/       # Data models
+│   ├── pages/        # Customer-facing screens
+│   ├── providers/    # Application state and session
+│   ├── services/     # API integration
+│   └── main.dart     # Application entry point
+├── test/             # Automated tests
+├── android/          # Android project
+├── ios/              # iOS project
+└── web/              # Web project
 ```
 
-## Integração com o backend
+## Backend Integration
 
-Este repositório contém somente o aplicativo cliente. As funcionalidades dependem de uma API REST com endpoints para autenticação, tema público, cardápio, fidelidade e reservas. Configure HTTPS, CORS e os mecanismos de autenticação no servidor antes de publicar.
+This repository contains only the client application. Its features depend on a REST API that provides authentication, public theme, menu, loyalty, and reservation endpoints. Configure HTTPS, CORS, and server-side authentication before publishing.
 
-## Licença
+## License
 
-Projeto de portfólio. O código-fonte está disponível para consulta e demonstração; nenhum direito de uso comercial é concedido sem autorização do autor.
+Portfolio project. The source code is available for review and demonstration; no commercial usage rights are granted without the author's permission.

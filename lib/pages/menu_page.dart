@@ -64,7 +64,7 @@ class _MenuPageState extends State<MenuPage> {
     final app = context.watch<AppProvider>();
     final logoUrl = app.theme?.logoUrl;
     
-    // Agrupar produtos por categoria
+    // Group products by category.
     Map<String, List<Product>> groupedProducts = {};
     for (var product in _products) {
       final category = (product.category.isNotEmpty ? product.category : 'Altro');
@@ -109,7 +109,7 @@ class _MenuPageState extends State<MenuPage> {
 
               for (var i = 0; i < categories.length; i++) {
                 if (index == productCount) {
-                  // Mostrar header de categoria
+                  // Display the category header.
                   return Padding(
                     padding: const EdgeInsets.only(top: 16, bottom: 12),
                     child: Text(
@@ -125,7 +125,7 @@ class _MenuPageState extends State<MenuPage> {
                 }
                 productCount++;
                 
-                // Mostrar produtos da categoria
+                // Display products in the category.
                 int productsInCategory = groupedProducts[categories[i]]!.length;
                 if (index < productCount + productsInCategory) {
                   final product = groupedProducts[categories[i]]![index - productCount];

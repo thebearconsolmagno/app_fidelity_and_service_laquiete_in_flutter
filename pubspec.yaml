@@ -1,6 +1,6 @@
 
 name: la_quiete_app
-description: Aplicativo mobile do La Quiete para cardápio, fidelidade e reservas.
+description: La Quiete mobile app for menus, loyalty rewards, and reservations.
 version: 1.0.0+1
 
 environment:
